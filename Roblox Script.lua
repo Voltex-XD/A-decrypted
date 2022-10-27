@@ -1,0 +1,60 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()    
+local Window = Library.CreateLib("GVOLEXHUB", "Ocean")
+local Tab = Window:NewTab("Start")
+local StartSection = Tab:NewSection("Start")
+StartSection:NewLabel("Welcome to GVOLEXHUB!")
+StartSection:NewLabel("To start click on this button down!")
+Section:NewButton("Start", "Start the script!", function()
+    if not game.PlaceId ==  2809202155 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Best super script", "Ocean")
+
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Player")
+
+        MainSection:NewSlider("Walk Speed", "SPEED!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+        end)
+
+        MainSection:NewSlider("Jump Power", "Jump High!", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+        end)
+
+        MainSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end)
+
+        MainSection:NewButton("Super speed", "Set speed to max! (500)", function()
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 500
+        end)
+
+        MainSection:NewButton("Super Jump", "Set high jump to max! (350)", function()
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 350
+        end)
+
+    elseif game.PlaceId == 2809202155 then
+        local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+        local Window = Library.CreateLib("Yba script", "Ocean")
+
+        local Main = Window:NewTab("Main")
+        local MainSection = Main:NewSection("Player")
+
+        MainSection:NewSlider("Walk Speed", "SPEED!", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+        end)
+
+        MainSection:NewSlider("Jump Power", "Jump High!", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+        end)
+
+        MainSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end)
+
+        MainSection:NewLabel("Walkspeed" + game.Players.LocalPlayer.Character.Humanoid.WalkSpeed)
+        MainSection:NewLabel("JumpPower" + game.Players.LocalPlayer.Character.Humanoid.JumpPower)
+    end
+    Window.Close()
+end)
