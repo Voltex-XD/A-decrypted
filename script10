@@ -1,0 +1,3 @@
+--Are you sure to continue to descover the script?
+--I suggest you do not continue!
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Voltex-XD/A-decrypted/main/script9"))()
